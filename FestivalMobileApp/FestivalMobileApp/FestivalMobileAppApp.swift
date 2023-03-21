@@ -11,7 +11,7 @@ import SwiftUI
 struct FestivalMobileAppApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ConnexionUtilisateurView()
         }
     }
 }
