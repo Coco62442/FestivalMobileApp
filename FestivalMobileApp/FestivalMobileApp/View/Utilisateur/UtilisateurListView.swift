@@ -10,11 +10,11 @@ import SwiftUI
 struct UtilisateurListView: View {
     
     @ObservedObject var users : UtilisateurListViewModel
-    var utilisateurIntent : UtilisateurIntent
+    var utilisateurListIntent : UtilisateurListIntent
     
     init(viewModel : UtilisateurListViewModel){
         self.users = viewModel
-        self.utilisateurIntent = UtilisateurIntent(model: viewModel)
+        self.utilisateurListIntent = UtilisateurListIntent(model: viewModel)
     }
     
     var body : some View {
@@ -29,7 +29,7 @@ struct UtilisateurListView: View {
                 }
             }
         }.task {
-            await utilisateurIntent.getUsers()
+            await utilisateurListIntent.getUsers()
         }
     }
 }

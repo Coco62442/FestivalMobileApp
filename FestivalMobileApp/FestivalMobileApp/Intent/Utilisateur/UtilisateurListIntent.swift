@@ -27,19 +27,6 @@ struct UtilisateurListIntent {
             return
         }
         do{
-            /*var requete = URLRequest(url: url)
-            requete.httpMethod = "GET"
-            //append a value to a field
-            requete.addValue("application/json", forHTTPHeaderField: "Content-Type")
-             */
-            //set (replace) a value to a field
-            //requete.setValue(<#T##value: String?##String?#>, forHTTPHeaderField: <#T##String#>)
-            /*
-            guard let encoded = await JSONHelper.encode(data: self.user) else {
-                print("pb encodage")
-                return
-            }
-            let (data, response) = try await URLSession.shared.upload(for: requete, from: encoded)*/
             let (data, response) = try await URLSession.shared.data(from: url)
             debugPrint("data normal")
             debugPrint(data)
@@ -67,6 +54,7 @@ struct UtilisateurListIntent {
         catch{
             debugPrint("bad request")
         }
-    }}
+    }
+}
 
 

@@ -12,35 +12,22 @@ import SwiftUI
 struct UtilisateurIntent {
     
     
-    @ObservedObject private var model : UtilisateurListViewModel
+    @ObservedObject private var model : UtilisateurViewModel
     
     var urls = Config()
     
-    init(model: UtilisateurListViewModel){
+    init(model: UtilisateurViewModel){
         self.model = model
     }
     
-    func getUsers() async {
-        self.model.state = .loadingUtilisateurs
+    func getUser(idUtilisateur : String) async {
+        self.model.state = .loadingUtilisateur
         
-        guard let url = URL(string: urls.urlBenevole) else {
+        guard let url = URL(string: urls.urlBenevole+"/"+idUtilisateur) else {
             debugPrint("bad url getUser")
             return
         }
         do{
-            /*var requete = URLRequest(url: url)
-            requete.httpMethod = "GET"
-            //append a value to a field
-            requete.addValue("application/json", forHTTPHeaderField: "Content-Type")
-             */
-            //set (replace) a value to a field
-            //requete.setValue(<#T##value: String?##String?#>, forHTTPHeaderField: <#T##String#>)
-            /*
-            guard let encoded = await JSONHelper.encode(data: self.user) else {
-                print("pb encodage")
-                return
-            }
-            let (data, response) = try await URLSession.shared.upload(for: requete, from: encoded)*/
             let (data, response) = try await URLSession.shared.data(from: url)
             debugPrint("data normal")
             debugPrint(data)
@@ -51,14 +38,14 @@ struct UtilisateurIntent {
             if httpresponse.statusCode == 200{
                 debugPrint("je suis conne")
                 debugPrint("\(sdata)")
-                guard let decoded : [UtilisateurDTO] = await JSONHelper.decode(data: data) else{
+                guard let decoded : UtilisateurDTO = await JSONHelper.decode(data: data) else{
                     debugPrint("mauvaise récup données")
                     return
                 }
                 
                 debugPrint("donneees decodeess")
                 debugPrint(decoded)
-                model.state = .loadedUtilisateurs(decoded)
+                model.state = .loadedUtilisateur(decoded)
                 
             }
             else{
@@ -68,5 +55,7 @@ struct UtilisateurIntent {
         catch{
             debugPrint("bad request")
         }
-    }}
+    }
+    
+}
 

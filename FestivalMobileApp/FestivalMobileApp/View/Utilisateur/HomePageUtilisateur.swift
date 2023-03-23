@@ -12,6 +12,14 @@ struct HomePageUtilisateur: View {
     // TODO: fetch la liste des festivals
     var festivalList: Any = []
     @State private var changeViewToFestivals = false
+    /*
+    var utilisateur: UtilisateurDTO = UtilisateurDTO(_id: "", nom: "", prenom: "", email: "", isAdmin: false)
+    
+    var utilisateurIntent : UtilisateurIntent
+    
+    init(){
+        self.utilisateur = utilisateurIntent.getUser(idUtilisateur: "641c30a4ce0582aea7fbe602")
+    }*/
     
     var body: some View {
         
@@ -22,6 +30,7 @@ struct HomePageUtilisateur: View {
         }
         
         VStack {
+            //Text("Nom :"+user.nom)
             Text("FestiFun!")
             Spacer()
             Text("Bienvenu dans l'appli FestiFun, la première application qui te permet de te proposer facilement en bénévole sur un festival !")

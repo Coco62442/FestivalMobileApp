@@ -8,5 +8,6 @@
 import Foundation
 
 protocol FestivalModelObserver {
-    func change(name: String)
+    func changeName(name: String)
+    func changeNbrJours(nbrJours: Int)
 }

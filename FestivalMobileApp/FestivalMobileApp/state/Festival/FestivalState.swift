@@ -10,7 +10,8 @@ import Foundation
 enum FestivalState {
     case ready
     case changingName(String)
+    case changingNbrJours(Int)
     case error
-    case loadingUtilisateur
-    case loadedUtilisateur(UtilisateurDTO)
+    case loadingFestival
+    case loadedFestival(FestivalDTO)
 }
