@@ -32,6 +32,17 @@
 		B789EF8829C315D30009BA59 /* ConnexionUtilisateurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B789EF8729C315D30009BA59 /* ConnexionUtilisateurView.swift */; };
 		B789EF8A29C315D40009BA59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B789EF8929C315D40009BA59 /* Assets.xcassets */; };
 		B789EF8D29C315D40009BA59 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B789EF8C29C315D40009BA59 /* Preview Assets.xcassets */; };
+		B7B8623C29CDA66D000D6DD8 /* CreneauDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B8623B29CDA66D000D6DD8 /* CreneauDTO.swift */; };
+		B7B8623F29CDA6DA000D6DD8 /* JourDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B8623E29CDA6DA000D6DD8 /* JourDTO.swift */; };
+		B7B8624229CDA748000D6DD8 /* ZoneDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B8624129CDA748000D6DD8 /* ZoneDTO.swift */; };
+		B7B8624529CDA7C4000D6DD8 /* AffectationDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B8624429CDA7C4000D6DD8 /* AffectationDTO.swift */; };
+		B7B8624729CDAD0C000D6DD8 /* UtilisateurLoginDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B8624629CDAD0C000D6DD8 /* UtilisateurLoginDTO.swift */; };
+		B7B8624929CDAFB6000D6DD8 /* UtilisateurCreateDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B8624829CDAFB6000D6DD8 /* UtilisateurCreateDTO.swift */; };
+		B7B8625529CDC17A000D6DD8 /* Fetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B8625429CDC17A000D6DD8 /* Fetch.swift */; };
+		B7B8625729CDC2DE000D6DD8 /* ErrorApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B8625629CDC2DE000D6DD8 /* ErrorApi.swift */; };
+		B7B8625929CDDFAC000D6DD8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B8625829CDDFAC000D6DD8 /* ContentView.swift */; };
+		B7B8625B29CDE070000D6DD8 /* Authentification.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B8625A29CDE070000D6DD8 /* Authentification.swift */; };
+		B7B8625D29CDE113000D6DD8 /* HomePageAdmin.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B8625C29CDE113000D6DD8 /* HomePageAdmin.swift */; };
 		B7F1FAF329CB0A84007C457D /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F1FAF229CB0A84007C457D /* Config.swift */; };
 		B7F1FAFE29CB243B007C457D /* ListFestivalUtilisateurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F1FAFD29CB243B007C457D /* ListFestivalUtilisateurView.swift */; };
 /* End PBXBuildFile section */
@@ -63,6 +74,17 @@
 		B789EF8729C315D30009BA59 /* ConnexionUtilisateurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnexionUtilisateurView.swift; sourceTree = "<group>"; };
 		B789EF8929C315D40009BA59 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B789EF8C29C315D40009BA59 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B7B8623B29CDA66D000D6DD8 /* CreneauDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreneauDTO.swift; sourceTree = "<group>"; };
+		B7B8623E29CDA6DA000D6DD8 /* JourDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourDTO.swift; sourceTree = "<group>"; };
+		B7B8624129CDA748000D6DD8 /* ZoneDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoneDTO.swift; sourceTree = "<group>"; };
+		B7B8624429CDA7C4000D6DD8 /* AffectationDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AffectationDTO.swift; sourceTree = "<group>"; };
+		B7B8624629CDAD0C000D6DD8 /* UtilisateurLoginDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilisateurLoginDTO.swift; sourceTree = "<group>"; };
+		B7B8624829CDAFB6000D6DD8 /* UtilisateurCreateDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilisateurCreateDTO.swift; sourceTree = "<group>"; };
+		B7B8625429CDC17A000D6DD8 /* Fetch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fetch.swift; sourceTree = "<group>"; };
+		B7B8625629CDC2DE000D6DD8 /* ErrorApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorApi.swift; sourceTree = "<group>"; };
+		B7B8625829CDDFAC000D6DD8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B7B8625A29CDE070000D6DD8 /* Authentification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentification.swift; sourceTree = "<group>"; };
+		B7B8625C29CDE113000D6DD8 /* HomePageAdmin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomePageAdmin.swift; path = FestivalMobileApp/Intent/HomePageAdmin.swift; sourceTree = SOURCE_ROOT; };
 		B7F1FAF229CB0A84007C457D /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		B7F1FAFD29CB243B007C457D /* ListFestivalUtilisateurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFestivalUtilisateurView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -89,8 +111,9 @@
 		B70057B429CC799E00819E19 /* Intent */ = {
 			isa = PBXGroup;
 			children = (
-				B70057DE29CC9AA400819E19 /* Festival */,
+				B7B8625A29CDE070000D6DD8 /* Authentification.swift */,
 				B70057C829CC83DF00819E19 /* Utilisateur */,
+				B70057DE29CC9AA400819E19 /* Festival */,
 			);
 			path = Intent;
 			sourceTree = "<group>";
@@ -98,19 +121,23 @@
 		B70057B529CC79A800819E19 /* DTO */ = {
 			isa = PBXGroup;
 			children = (
+				B7B8624329CDA7B0000D6DD8 /* Affectation */,
+				B7B8624029CDA728000D6DD8 /* Zone */,
+				B7B8623D29CDA6CB000D6DD8 /* Jour */,
+				B7B8623A29CDA655000D6DD8 /* Creneau */,
 				B70057E329CC9AC900819E19 /* Festival */,
 				B70057C029CC7F0000819E19 /* Utilisateur */,
 			);
 			path = DTO;
 			sourceTree = "<group>";
 		};
-		B70057B629CC7A9600819E19 /* state */ = {
+		B70057B629CC7A9600819E19 /* State */ = {
 			isa = PBXGroup;
 			children = (
 				B70057D529CC956D00819E19 /* Festival */,
 				B70057BD29CC7DED00819E19 /* Utilisateur */,
 			);
-			path = state;
+			path = State;
 			sourceTree = "<group>";
 		};
 		B70057B729CC7AA900819E19 /* Model Observer */ = {
@@ -126,6 +153,8 @@
 			isa = PBXGroup;
 			children = (
 				B70057C629CC80BA00819E19 /* JSONHelper.swift */,
+				B7B8625429CDC17A000D6DD8 /* Fetch.swift */,
+				B7B8625629CDC2DE000D6DD8 /* ErrorApi.swift */,
 			);
 			path = Utilitaires;
 			sourceTree = "<group>";
@@ -160,6 +189,8 @@
 			isa = PBXGroup;
 			children = (
 				B70057C129CC7F1900819E19 /* UtilisateurDTO.swift */,
+				B7B8624629CDAD0C000D6DD8 /* UtilisateurLoginDTO.swift */,
+				B7B8624829CDAFB6000D6DD8 /* UtilisateurCreateDTO.swift */,
 			);
 			path = Utilisateur;
 			sourceTree = "<group>";
@@ -232,6 +263,7 @@
 		B76FADAF29C9B97D00D29A3D /* Admin */ = {
 			isa = PBXGroup;
 			children = (
+				B7B8625C29CDE113000D6DD8 /* HomePageAdmin.swift */,
 			);
 			path = Admin;
 			sourceTree = "<group>";
@@ -255,15 +287,15 @@
 		B789EF8429C315D30009BA59 /* FestivalMobileApp */ = {
 			isa = PBXGroup;
 			children = (
-				B789EF8B29C315D40009BA59 /* View */,
-				B789EF8729C315D30009BA59 /* ConnexionUtilisateurView.swift */,
-				B70057B329CC78B200819E19 /* ModelView */,
 				B789EF8529C315D30009BA59 /* FestivalMobileAppApp.swift */,
+				B7B8625829CDDFAC000D6DD8 /* ContentView.swift */,
+				B789EF8B29C315D40009BA59 /* View */,
+				B70057B329CC78B200819E19 /* ModelView */,
 				B789EF8929C315D40009BA59 /* Assets.xcassets */,
 				B70057B929CC7BB900819E19 /* Preview Content */,
 				B70057B429CC799E00819E19 /* Intent */,
 				B70057B529CC79A800819E19 /* DTO */,
-				B70057B629CC7A9600819E19 /* state */,
+				B70057B629CC7A9600819E19 /* State */,
 				B70057B729CC7AA900819E19 /* Model Observer */,
 				B70057B829CC7AC000819E19 /* Utilitaires */,
 				B7F1FAF229CB0A84007C457D /* Config.swift */,
@@ -274,10 +306,43 @@
 		B789EF8B29C315D40009BA59 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B789EF8729C315D30009BA59 /* ConnexionUtilisateurView.swift */,
 				B76FADAF29C9B97D00D29A3D /* Admin */,
 				B76FADAE29C9B96300D29A3D /* Utilisateur */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		B7B8623A29CDA655000D6DD8 /* Creneau */ = {
+			isa = PBXGroup;
+			children = (
+				B7B8623B29CDA66D000D6DD8 /* CreneauDTO.swift */,
+			);
+			path = Creneau;
+			sourceTree = "<group>";
+		};
+		B7B8623D29CDA6CB000D6DD8 /* Jour */ = {
+			isa = PBXGroup;
+			children = (
+				B7B8623E29CDA6DA000D6DD8 /* JourDTO.swift */,
+			);
+			path = Jour;
+			sourceTree = "<group>";
+		};
+		B7B8624029CDA728000D6DD8 /* Zone */ = {
+			isa = PBXGroup;
+			children = (
+				B7B8624129CDA748000D6DD8 /* ZoneDTO.swift */,
+			);
+			path = Zone;
+			sourceTree = "<group>";
+		};
+		B7B8624329CDA7B0000D6DD8 /* Affectation */ = {
+			isa = PBXGroup;
+			children = (
+				B7B8624429CDA7C4000D6DD8 /* AffectationDTO.swift */,
+			);
+			path = Affectation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -353,28 +418,39 @@
 				B70057BC29CC7D1E00819E19 /* UtilisateurViewModel.swift in Sources */,
 				B76FADA929C9A63400D29A3D /* FooterUtilisateur.swift in Sources */,
 				B70057BF29CC7E4B00819E19 /* UtilisateurState.swift in Sources */,
+				B7B8624929CDAFB6000D6DD8 /* UtilisateurCreateDTO.swift in Sources */,
+				B7B8624229CDA748000D6DD8 /* ZoneDTO.swift in Sources */,
 				B789EF8829C315D30009BA59 /* ConnexionUtilisateurView.swift in Sources */,
 				B70057E529CC9ADB00819E19 /* FestivalDTO.swift in Sources */,
 				B7F1FAF329CB0A84007C457D /* Config.swift in Sources */,
 				B70057D729CC957E00819E19 /* FestivalState.swift in Sources */,
 				B70057D429CC956900819E19 /* FestivalModelObserver.swift in Sources */,
+				B7B8625729CDC2DE000D6DD8 /* ErrorApi.swift in Sources */,
 				B7F1FAFE29CB243B007C457D /* ListFestivalUtilisateurView.swift in Sources */,
 				B70057CF29CC882D00819E19 /* UtilisateurListView.swift in Sources */,
 				B76FADAB29C9A73F00D29A3D /* InscriptionUtilisateurView.swift in Sources */,
 				B789EF8629C315D30009BA59 /* FestivalMobileAppApp.swift in Sources */,
 				B70057C729CC80BA00819E19 /* JSONHelper.swift in Sources */,
+				B7B8624529CDA7C4000D6DD8 /* AffectationDTO.swift in Sources */,
+				B7B8625529CDC17A000D6DD8 /* Fetch.swift in Sources */,
+				B7B8624729CDAD0C000D6DD8 /* UtilisateurLoginDTO.swift in Sources */,
 				B76FADB129C9B9BC00D29A3D /* HomePageUtilisateur.swift in Sources */,
 				B70057DD29CC99B200819E19 /* FestivalListState.swift in Sources */,
 				B70057DB29CC990100819E19 /* UtilisateurIntent.swift in Sources */,
 				B70057E229CC9AC100819E19 /* FestivalListIntent.swift in Sources */,
 				B70057C529CC802300819E19 /* UtilisateurModelObserver.swift in Sources */,
+				B7B8625929CDDFAC000D6DD8 /* ContentView.swift in Sources */,
+				B7B8625D29CDE113000D6DD8 /* HomePageAdmin.swift in Sources */,
+				B7B8623F29CDA6DA000D6DD8 /* JourDTO.swift in Sources */,
 				B76FADB329C9BA8F00D29A3D /* ParametresUtilisateur.swift in Sources */,
 				B70057C229CC7F1900819E19 /* UtilisateurDTO.swift in Sources */,
 				B70057CC29CC841A00819E19 /* UtilisateurListViewModel.swift in Sources */,
 				B70057D929CC97D900819E19 /* UtilisateurListState.swift in Sources */,
 				B70057CA29CC83F000819E19 /* UtilisateurListIntent.swift in Sources */,
 				B70057D129CC88BC00819E19 /* UtilisateurItemView.swift in Sources */,
+				B7B8625B29CDE070000D6DD8 /* Authentification.swift in Sources */,
 				B70057E029CC9AB400819E19 /* FestivalIntent.swift in Sources */,
+				B7B8623C29CDA66D000D6DD8 /* CreneauDTO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

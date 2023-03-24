@@ -10,9 +10,12 @@ import Foundation
 enum UtilisateurState {//}: Equatable {//: CustomStringConvertible {
     case ready
     case changingName(String)
+    case changingInfos(UtilisateurDTO)
     case error
     case loadingUtilisateur
     case loadedUtilisateur(UtilisateurDTO)
+    case loadingLoginUtilisateur
+    case loadedLoginUtilisateur(UtilisateurDTO)
 }
 
 

@@ -23,32 +23,22 @@ struct UtilisateurListIntent {
         self.model.state = .loadingUtilisateurs
         
         guard let url = URL(string: urls.urlBenevole) else {
-            debugPrint("bad url getUser")
+            debugPrint("bad url getUsers")
             return
         }
         do{
-            let (data, response) = try await URLSession.shared.data(from: url)
-            debugPrint("data normal")
-            debugPrint(data)
-            let sdata = String(data: data, encoding: .utf8)!
-            debugPrint("sdata")
-            let httpresponse = response as! HTTPURLResponse
-            debugPrint(httpresponse)
-            if httpresponse.statusCode == 200{
-                debugPrint("je suis conne")
-                debugPrint("\(sdata)")
-                guard let decoded : [UtilisateurDTO] = await JSONHelper.decode(data: data) else{
-                    debugPrint("mauvaise récup données")
+            let data : Result<[UtilisateurDTO],ErrorApi> = await URLSession.shared.get(url: url)
+            debugPrint("\(data)")
+            switch data {
+                case .success(_):
+                do {
+                    let users : [UtilisateurDTO] = try data.get()
+                    model.state = .loadedUtilisateurs(users)
                     return
                 }
-                
-                debugPrint("donneees decodeess")
-                debugPrint(decoded)
-                model.state = .loadedUtilisateurs(decoded)
-                
-            }
-            else{
-                debugPrint("error \(httpresponse.statusCode):\(HTTPURLResponse.localizedString(forStatusCode: httpresponse.statusCode))")
+                case .failure(let err):
+                debugPrint("\(err)")
+                    return
             }
         }
         catch{

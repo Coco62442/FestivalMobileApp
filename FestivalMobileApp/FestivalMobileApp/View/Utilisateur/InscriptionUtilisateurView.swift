@@ -11,7 +11,13 @@ struct InscriptionUtilisateurView: View {
     @State var nom : String = ""
     @State var prenom : String = ""
     @State var email : String = ""
-    @State var mdp : String = ""
+    @State var password : String = ""
+    
+    private func handleClickInscription() {
+        var infosAuthentificationInscription = UtilisateurCreateDTO(nom: self.nom, prenom: self.prenom, email: self.email, password: self.password, isAdmin: false)
+        
+        // TODO: requête inscriptin (urls.urlRegister) c'est un post
+    }
     
     var body: some View {
         Form {
@@ -28,11 +34,13 @@ struct InscriptionUtilisateurView: View {
             }
             
             Section(header: Text("Mot de passe")) {
-                SecureField(text: $mdp) {
+                SecureField(text: $password) {
                     Text("Mot de passe")
                 }
             }
-            Button("Connexion"){}
+            Button("Connexion"){
+                handleClickInscription()
+            }
         }
     }
 }

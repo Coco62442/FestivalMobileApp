@@ -19,5 +19,13 @@ struct Config {
     var urlFestival: String {
         get { return url + "/festival" }
     }
+    
+    var urlRegister: String {
+        get { return url + "/auth" }
+    }
+    
+    var urlLogin: String {
+        get { return urlRegister + "/login" }
+    }
 }
     

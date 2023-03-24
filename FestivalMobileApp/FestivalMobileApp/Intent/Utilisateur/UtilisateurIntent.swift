@@ -20,6 +20,34 @@ struct UtilisateurIntent {
         self.model = model
     }
     
+    func loginUser(user : UtilisateurLoginDTO) async {
+        self.model.state = .loadingLoginUtilisateur
+        
+        guard let url = URL(string: urls.urlLogin) else {
+            debugPrint("bad url login")
+            return
+        }
+        do{
+            let data : Result<UtilisateurDTO,ErrorApi> = await URLSession.shared.login(url: url, element: user)
+            debugPrint("\(data)")
+            switch data {
+            case .success(_):
+                do {
+                    let user : UtilisateurDTO = try data.get()
+                    model.state = .loadedLoginUtilisateur(user)
+                    return
+                }
+                catch {
+                    debugPrint("erreur lors de la récupération des données")
+                }
+            case .failure(let err):
+                debugPrint("\(err)")
+                return
+            }
+        }
+    }
+    
+    
     func getUser(idUtilisateur : String) async {
         self.model.state = .loadingUtilisateur
         
@@ -28,34 +56,23 @@ struct UtilisateurIntent {
             return
         }
         do{
-            let (data, response) = try await URLSession.shared.data(from: url)
-            debugPrint("data normal")
-            debugPrint(data)
-            let sdata = String(data: data, encoding: .utf8)!
-            debugPrint("sdata")
-            let httpresponse = response as! HTTPURLResponse
-            debugPrint(httpresponse)
-            if httpresponse.statusCode == 200{
-                debugPrint("je suis conne")
-                debugPrint("\(sdata)")
-                guard let decoded : UtilisateurDTO = await JSONHelper.decode(data: data) else{
-                    debugPrint("mauvaise récup données")
+            let data : Result<UtilisateurDTO,ErrorApi> = await URLSession.shared.get(url: url)
+            debugPrint("\(data)")
+            switch data {
+            case .success(_):
+                do {
+                    let user : UtilisateurDTO = try data.get()
+                    model.state = .loadedUtilisateur(user)
                     return
                 }
-                
-                debugPrint("donneees decodeess")
-                debugPrint(decoded)
-                model.state = .loadedUtilisateur(decoded)
-                
+                catch {
+                    debugPrint("erreur lors de la récupération des données")
+                }
+            case .failure(let err):
+                debugPrint("\(err)")
+                return
             }
-            else{
-                debugPrint("error \(httpresponse.statusCode):\(HTTPURLResponse.localizedString(forStatusCode: httpresponse.statusCode))")
-            }
-        }
-        catch{
-            debugPrint("bad request")
         }
     }
-    
 }
 
