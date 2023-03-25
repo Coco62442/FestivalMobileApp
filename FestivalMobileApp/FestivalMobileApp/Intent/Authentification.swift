@@ -12,7 +12,7 @@ class Authentification: ObservableObject {
     @Published var isValidated = false
     @Published var isAdminValidated = false
     
-    var utilisateurListIntent : UtilisateurListIntent
+    //var utilisateurListIntent : UtilisateurListIntent
     
     enum AuthentificationError: Error, Identifiable {
         case invalidCredentials
@@ -38,10 +38,5 @@ class Authentification: ObservableObject {
             self.isValidated = false
         }
     }
-    
-    
-    
-    
-    
     
 }

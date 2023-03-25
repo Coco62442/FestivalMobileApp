@@ -27,11 +27,11 @@ struct ConnexionUtilisateurView: View {
     @State var email : String = ""
     @State var mdp : String = ""
     
-    @EnvironmentObject var authentification: Authentification
-    @ObservedObject var userModel : UtilisateurViewModel
+    //@EnvironmentObject var authentification: Authentification
+    //@ObservedObject var userModel : UtilisateurViewModel
     
-    var utilisateurIntent : UtilisateurIntent
-    @State var utilisateurLogin : UtilisateurLoginDTO = UtilisateurLoginDTO(email: "", password: "")
+    //var utilisateurIntent : UtilisateurIntent
+    //@State var utilisateurLogin : UtilisateurLoginDTO = UtilisateurLoginDTO(email: "", password: "")
     /*
     init(){
         self.userModel = userModel
